@@ -1,0 +1,39 @@
+<div class="header">
+  <div class="container"><img src="images/monopoly_trans.png" class="banner"/></div>
+</div>
+<div class="row">
+  <div ng-repeat="piece in jackpot" class="col-sm-6 col-md-6">
+    <table>
+      <tr>
+        <th colspan="2">Piece: {{ piece.letter }} <br/>
+          <div class="th-small">{{ piece.prize }}</div>
+        </th>
+      </tr>
+      <tr ng-repeat="number in piece.numbers">
+        <td>{{ number }}</td>
+        <td>
+          <div class="plus-minus"> <span ng-click="piece.count[$index] = piece.count[$index] -1" class="minus">-  </span><span class="count"> {{ piece.count[$index] }}</span><span ng-click="piece.count[$index] = piece.count[$index] +1" class="plus">+ </span></div>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="row"></div>
+  <div ng-repeat="piece in pieces">
+    <div ng-if="windowWidth <= 768 && $index % 2 == 0" class="clearfix"></div>
+    <div class="col-sm-6 col-md-4">
+      <table>
+        <tr>
+          <th colspan="2">Piece: {{ piece.letter }} <br/>
+            <div class="th-small">{{ piece.prize }}</div>
+          </th>
+        </tr>
+        <tr ng-repeat="number in piece.numbers">
+          <td>{{ number }}</td>
+          <td>
+            <div class="plus-minus"> <span ng-click="piece.count[$index] = piece.count[$index] -1" class="minus">- </span><span class="count"> {{ piece.count[$index] }}</span><span ng-click="piece.count[$index] = piece.count[$index] +1" class="plus">+ </span></div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

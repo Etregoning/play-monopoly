@@ -1,0 +1,142 @@
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: url("../images/monopoly_background.jpg") no-repeat fixed;
+  background-size: cover;
+}
+
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.header {
+  margin-bottom: 30px;
+}
+
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 19px;
+}
+
+.header .container {
+  width: 100%;
+}
+
+.header .banner {
+  width: 100%;
+  display: inline-block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
+
+table {
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 20px;
+  border-style: solid;
+  border-color: #830300;
+  border-collapse: separate;
+  border-radius: 10px;
+  width: 100%;
+}
+
+table th {
+  text-align: center;
+  background-color: #830300;
+  color: #fff;
+  text-shadow: 1px 1px #000;
+  font-size: 1.4em;
+  height: 75px;
+}
+
+table th div.th-small {
+  font-size: 0.8em;
+}
+
+table td {
+  text-align: center;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #830300;
+  background-color: #f00;
+  color: #fff;
+  font-weight: 600;
+  text-shadow: 1px 1px #000;
+  box-shadow: inset 0 0 35px #830300;
+  font-size: 1em;
+  height: 30px;
+  width: 50%;
+}
+
+table td .plus-minus {
+  display: inline;
+  text-align: right;
+  position: relative;
+  right: 0;
+}
+
+span {
+  font-weight: 900;
+  margin-right: 0;
+}
+
+span.plus,
+span.minus {
+  cursor: pointer;
+  font-size: 1em;
+  padding: 4px 13px;
+  background-color: #830300;
+  box-shadow: inset 1px -1px 1px rgba(0,0,0,0.5),
+  inset 0 1px 1px rgba(0,0,0,0.5);
+}
+
+span.count {
+  background-color: #fff;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #000;
+  text-shadow: 1px 1px #ccc;
+}
+
+.lastrow {
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 0;
+}
+
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
