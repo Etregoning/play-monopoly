@@ -24,11 +24,7 @@ angular.module('monopolyApp')
         prize: '$1,000,000 Vacation Home',
         numbers: ['8Y09A','8Y10B','8Y11C','8Y12D','8Y13E','8Y14F','8Y15G','8Y16H'],
         count: [0,0,0,0,0,0,0,0]
-      }
-    ];
-
-    var countInPieces = localStorageService.get('pieces');
-    $scope.pieces = countInPieces || [
+      },
       {
         letter: '8B',
         prize: '$20,000 College Tuition',
@@ -52,7 +48,11 @@ angular.module('monopolyApp')
         prize: '$100,000 Cash or Luxury Car',
         numbers: ['8E81A','8E82B','8E8C3','8E384D','8E85E'],
         count: [0,0,0,0,0]
-      },
+      }
+    ];
+
+    var countInPieces = localStorageService.get('pieces');
+    $scope.pieces = countInPieces || [
       {
         letter: '8F',
         prize: '$5,000 Cash',
@@ -142,7 +142,10 @@ angular.module('monopolyApp')
         prize: '$25 Gift Card Mall',
         numbers: ['8X17A','8X18B','8X19C','8X20D'],
         count: [0,0,0,0]
-      },
+      }
+    ];
+    var countInRowFix = localStorageService.get('jackpot');
+    $scope.rowFix = countInRowFix || [
       {
         letter:  '9A',
         prize: '$10,000 4-Wheeler',
@@ -178,7 +181,10 @@ angular.module('monopolyApp')
         prize: '$10 Grocery Gift Card',
         numbers: ['9F24A','9F25B','9F26C','9F27D'],
         count: [0,0,0,0]
-      },
+      }
+    ];
+    var countInRemaining = localStorageService.get('jackpot');
+    $scope.remaining = countInRemaining || [
       {
         letter: '9G',
         prize: '$10 Cash',
@@ -204,6 +210,12 @@ angular.module('monopolyApp')
     }, true);
     $scope.$watch('pieces', function () {
       localStorageService.set('pieces', $scope.pieces);
+    }, true);
+    $scope.$watch('rowFix', function () {
+      localStorageService.set('rowFix', $scope.rowFix);
+    }, true);
+    $scope.$watch('remaining', function () {
+      localStorageService.set('remaining', $scope.remaining);
     }, true);
 
   });
