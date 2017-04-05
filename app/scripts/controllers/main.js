@@ -11,6 +11,12 @@ angular.module('monopolyApp')
       });
     };
 
+    $(function() {
+        $(".clearLink").click(function() {
+            $('#clearCache').modal('show');
+        });
+    });
+
     var countInJackpot = localStorageService.get('jackpot');
     $scope.jackpot = countInJackpot || [
       {

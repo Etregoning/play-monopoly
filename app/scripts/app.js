@@ -9,7 +9,7 @@ angular
     'LocalStorageModule'
   ])
   .config(['localStorageServiceProvider', function(localStorageServiceProvider){
-  localStorageServiceProvider.setPrefix('ls');
+  localStorageServiceProvider.setPrefix('monopolyApp');
   }])
   .config(function ($routeProvider) {
     $routeProvider
